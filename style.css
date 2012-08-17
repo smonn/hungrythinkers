@@ -12,22 +12,40 @@
 }
 .rotate div.top {
   -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
 }
 .rotate div.right {
   -webkit-transform: rotate(72deg);
+  -moz-transform: rotate(72deg);
+  -o-transform: rotate(72deg);
+  transform: rotate(72deg);
 }
 .rotate div.bottom-right {
   -webkit-transform: rotate(144deg);
+  -moz-transform: rotate(144deg);
+  -o-transform: rotate(144deg);
+  transform: rotate(144deg);
 }
 .rotate div.bottom-left {
   -webkit-transform: rotate(-144deg);
+  -moz-transform: rotate(-144deg);
+  -o-transform: rotate(-144deg);
+  transform: rotate(-144deg);
 }
 .rotate div.left {
   -webkit-transform: rotate(-72deg);
+  -moz-transform: rotate(-72deg);
+  -o-transform: rotate(-72deg);
+  transform: rotate(-72deg);
 }
 
 #philosophers div {
   -webkit-transform-origin: 50% 140px;
+  -moz-transform-origin: 50% 140px;
+  -o-transform-origin: 50% 140px;
+  transform-origin: 50% 140px;
   border: 0px solid #eee;
   height: 50px;
   width: 50px;
@@ -55,12 +73,18 @@
 
 #forks {
   -webkit-transform: rotate(36deg);
+  -moz-transform: rotate(36deg);
+  -o-transform: rotate(36deg);
+  transform: rotate(36deg);
   width: 300px;
   height: 300px;
 }
 
 #forks div {
   -webkit-transform-origin: 50% 80px;
+  -moz-transform-origin: 50% 80px;
+  -o-transform-origin: 50% 80px;
+  transform-origin: 50% 80px;
   background-color: #555;
   height: 30px;
   width: 6px;
