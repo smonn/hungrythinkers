@@ -1,3 +1,4 @@
+/*jslint indent: 2 */
 (function (global) {
   'use strict';
   var initialized,
@@ -7,35 +8,27 @@
     thinkState,
     fork,
     handler;
-  
   observable = function (that) {
     var observers = [];
-    
     that.observe = function (observer) {
       observers.push(observer);
     };
-    
     that.notify = function () {
       var i;
       for (i = 0; i < observers.length; i += 1) {
         observers[i](that);
       }
     };
-    
     return that;
   };
-  
   fork = function (index) {
     var that = {},
       pickedByName = '',
       picked = false;
-    
     that = observable(that);
-    
     that.index = function () {
       return index;
     };
-    
     that.pickup = function (name) {
       if (picked === false) {
         picked = true;
@@ -43,10 +36,8 @@
         that.notify();
         return true;
       }
-      
       return false;
     };
-    
     that.drop = function (name) {
       if (picked === true && pickedByName === name) {
         picked = false;
@@ -54,26 +45,20 @@
         that.notify();
         return true;
       }
-      
       return false;
     };
-    
     that.pickedByName = function (name) {
       return pickedByName === name;
     };
-    
     that.name = function () {
       return pickedByName;
     };
-    
     that.silentUpdate = function (name, state) {
       pickedByName = name;
       picked = state;
     };
-    
     return that;
   };
-  
   eatState = function (philosopher) {
     var that = {},
       name = philosopher.name(),
