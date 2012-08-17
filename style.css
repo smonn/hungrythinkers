@@ -1,0 +1,111 @@
+#table {
+  width: 300px;
+  height: 300px;
+  background-color: #222;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.rotate div {
+  position: absolute;
+}
+.rotate div.top {
+  -webkit-transform: rotate(0deg);
+}
+.rotate div.right {
+  -webkit-transform: rotate(72deg);
+}
+.rotate div.bottom-right {
+  -webkit-transform: rotate(144deg);
+}
+.rotate div.bottom-left {
+  -webkit-transform: rotate(-144deg);
+}
+.rotate div.left {
+  -webkit-transform: rotate(-72deg);
+}
+
+#philosophers div {
+  -webkit-transform-origin: 50% 140px;
+  border: 0px solid #eee;
+  height: 50px;
+  width: 50px;
+  top: 10px;
+  left: 50%;
+  border-radius: 50px;
+  margin-left: -25px;
+}
+
+#philosophers div.top, #forks div.fork-Mal, #messages div.top {
+  background-color: hsl(20, 80%, 80%);
+}
+#philosophers div.right, #forks div.fork-Kaylee, #messages div.right {
+  background-color: hsl(92, 80%, 80%);
+}
+#philosophers div.bottom-right, #forks div.fork-Wash, #messages div.bottom-right {
+  background-color: hsl(164, 80%, 80%);
+}
+#philosophers div.bottom-left, #forks div.fork-Jayne, #messages div.bottom-left {
+  background-color: hsl(236, 80%, 80%);
+}
+#philosophers div.left, #forks div.fork-River, #messages div.left {
+  background-color: hsl(308, 80%, 80%);
+}
+
+#forks {
+  -webkit-transform: rotate(36deg);
+  width: 300px;
+  height: 300px;
+}
+
+#forks div {
+  -webkit-transform-origin: 50% 80px;
+  background-color: #555;
+  height: 30px;
+  width: 6px;
+  margin-left: -3px;
+  top: 70px;
+  left: 50%;
+  border-radius: 50px;
+}
+
+#messages {
+  position: absolute;
+  top: 10px;
+  left: 320px;
+  width: 300px;
+  height: 300px;
+  background-color: #eee;
+}
+
+#messages div {
+  position: absolute;
+  left: 10px;
+  width: 260px;
+  padding: 0 10px;
+  height: 48px;
+  background-color: #ddd;
+  line-height: 48px;
+  text-overflow: ellipsis;
+  color: #222;
+  font-family: monospace;
+  text-align: left;
+  font-size: 16px;
+}
+#messages div.top {
+  top: 10px;
+}
+#messages div.right {
+  top: 68px;
+}
+#messages div.bottom-right {
+  top: 126px;
+}
+#messages div.bottom-left {
+  top: 184px;
+}
+#messages div.left {
+  top: 242px;
+}
+
