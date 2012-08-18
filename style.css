@@ -55,29 +55,56 @@ body {
   -moz-transform-origin: 50% 140px;
   -o-transform-origin: 50% 140px;
   transform-origin: 50% 140px;
-  border: 0px solid #eee;
-  height: 50px;
-  width: 50px;
+  border: 4px solid #222;
+  height: 42px;
+  width: 42px;
   top: 10px;
   left: 50%;
   border-radius: 50px;
   margin-left: -25px;
+  -webkit-transition: 0.5s linear;
+  -moz-transition: 0.5s linear;
+  -o-transition: 0.5s linear;
+  transition: 0.5s linear;
 }
 
 #philosophers div.top, #forks div.fork-Mal, #messages div.top {
   background-color: hsl(20, 80%, 80%);
 }
+#philosophers div.top.eating {
+  border-color: hsl(20, 80%, 80%);
+}
+
 #philosophers div.right, #forks div.fork-Kaylee, #messages div.right {
   background-color: hsl(92, 80%, 80%);
 }
+#philosophers div.right.eating {
+  border-color: hsl(92, 80%, 80%);
+}
+
 #philosophers div.bottom-right, #forks div.fork-Wash, #messages div.bottom-right {
   background-color: hsl(164, 80%, 80%);
 }
+#philosophers div.bottom-right.eating {
+  border-color: hsl(164, 80%, 80%);
+}
+
 #philosophers div.bottom-left, #forks div.fork-Jayne, #messages div.bottom-left {
   background-color: hsl(236, 80%, 80%);
 }
+#philosophers div.bottom-left.eating {
+  border-color: hsl(236, 80%, 80%);
+}
+
 #philosophers div.left, #forks div.fork-River, #messages div.left {
   background-color: hsl(308, 80%, 80%);
+}
+#philosophers div.left.eating {
+  border-color: hsl(308, 80%, 80%);
+}
+
+#philosophers div.eating {
+  background-color: #222 !important;
 }
 
 #forks {
@@ -101,6 +128,10 @@ body {
   top: 25px;
   left: 50%;
   border-radius: 50px;
+  -webkit-transition: 0.5s linear;
+  -moz-transition: 0.5s linear;
+  -o-transition: 0.5s linear;
+  transition: 0.5s linear;
 }
 
 #messages {
@@ -109,7 +140,7 @@ body {
   left: 320px;
   width: 300px;
   height: 300px;
-  background-color: #eee;
+  background-color: #222;
 }
 
 #messages div {

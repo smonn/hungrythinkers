@@ -77,8 +77,14 @@
   
   local.status = function (status) {
     var index = names.indexOf(status.name) + 1,
-      message = global.document.querySelector('#messages div:nth-child(' + index + ') .message');
+      message = global.document.querySelector('#messages div:nth-child(' + index + ') .message'),
+      plate = global.document.querySelector('#philosophers div:nth-child(' + index + ')');
     message.innerHTML = status.hunger + ' hunger, ' + status.state + 'ing';
+    if (status.state === 'eat') {
+      plate.classList.add('eating');
+    } else {
+      plate.classList.remove('eating');
+    }
   };
   
   local.init();
