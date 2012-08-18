@@ -5,7 +5,7 @@
     names = ['Mal', 'Kaylee', 'Wash', 'Jayne', 'River'],
     forks = ['', '', '', '', ''],
     emptyClassNames = ['top', 'right', 'bottom-right', 'bottom-left', 'left'],
-    timeout = 500,
+    timeout = 1000,
     workers = {},
     local = {};
   

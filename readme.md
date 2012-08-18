@@ -19,6 +19,3 @@ Another solution would be to let the philosophers keep any fork they manage to p
 ## Forks
 
 The forks are observables in order to send updates to the main thread, which in turn makes sure other copies of forks in other threads are updated. This is necessary since Web Workers doesn't share objects, it simply copies objects.
-
-
-test
