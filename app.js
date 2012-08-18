@@ -1,7 +1,7 @@
 /*jslint indent: 2 */
 (function (global) {
   'use strict';
-  var workerFileName = 'philosopher2.js',
+  var workerFileName = 'philosopher.js',
     names = ['Mal', 'Kaylee', 'Wash', 'Jayne', 'River'],
     forks = ['', '', '', '', ''],
     emptyClassNames = ['top', 'right', 'bottom-right', 'bottom-left', 'left'],
