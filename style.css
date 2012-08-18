@@ -90,15 +90,15 @@ body {
 }
 
 #forks div {
-  -webkit-transform-origin: 50% 80px;
-  -moz-transform-origin: 50% 80px;
-  -o-transform-origin: 50% 80px;
-  transform-origin: 50% 80px;
+  -webkit-transform-origin: 50% 125px;
+  -moz-transform-origin: 50% 125px;
+  -o-transform-origin: 50% 125px;
+  transform-origin: 50% 125px;
   background-color: #555;
   height: 30px;
   width: 6px;
   margin-left: -3px;
-  top: 70px;
+  top: 25px;
   left: 50%;
   border-radius: 50px;
 }
