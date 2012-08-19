@@ -8,7 +8,7 @@
     timeout = 1000,
     workers = {},
     local = {};
-  
+
   local.init = function () {
     var i,
       right;
@@ -22,47 +22,45 @@
       workers[names[i]].onerror = local.handleError;
       workers[names[i]].postMessage({ type: 'init', name: names[i], left: i, right: right, timeout: timeout });
     }
-  }; 
-  
+  };
+
   local.handleMessage = function (event) {
     if (local.hasOwnProperty(event.data.type)) {
       local[event.data.type](event.data);
     }
   };
-  
+
   local.handleError = function (event) {
     global.console.error('worker error', event);
   };
-  
+
   local.request = function (message) {
-    var worker = workers[message.name],
-      left = false,
-      right = false;
-    
+    var worker = workers[message.name];
+
     if ((forks[message.left] === '' || forks[message.left] === message.name) && (forks[message.right] === '' || forks[message.right] === message.name)) {
       forks[message.right] = message.name;
       forks[message.left] = message.name;
       worker.postMessage({ type: 'forks', left: true, right: true });
     }
-    
+
     local.updateForks();
   };
-  
+
   local.release = function (message) {
     var worker = workers[message.name];
-    
+
     if (forks[message.left] === message.name) {
       forks[message.left] = '';
     }
-    
+
     if (forks[message.right] === message.name) {
       forks[message.right] = '';
     }
-    
+
     local.updateForks();
     worker.postMessage({ type: 'forks', left: false, right: false });
   };
-  
+
   local.updateForks = function () {
     var div = global.document.querySelectorAll('#forks div'),
       i;
@@ -74,7 +72,7 @@
       }
     }
   };
-  
+
   local.status = function (status) {
     var index = names.indexOf(status.name) + 1,
       message = global.document.querySelector('#messages div:nth-child(' + index + ') .message'),
@@ -86,6 +84,6 @@
       plate.classList.remove('eating');
     }
   };
-  
+
   local.init();
 }(this));
