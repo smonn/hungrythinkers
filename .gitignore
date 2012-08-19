@@ -1,3 +1,3 @@
 deploy.php
-foo
-bar
+deploy.log
+test_curl.php
